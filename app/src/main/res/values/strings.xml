@@ -1,3 +1,7 @@
 <resources>
-    <string name="app_name">MiniOS</string>
+    <string name="app_name" translatable="false">MiniOS</string>
+
+    <string name="keyguard_message">Press OK to unlock</string>
+    <string name="fota_new_version">Found to the new version, do you want to upgrade?</string>
+    <string name="fota_update_result">Update successed!</string>
 </resources>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="fota_new_version">新しいバージョンが見つかりました。アップグレードしますか？</string>
+    <string name="fota_update_result">アップグレード成功。</string>
+    <string name="keyguard_message">ロックを解除する場合はＯＫを押します</string>
+</resources>

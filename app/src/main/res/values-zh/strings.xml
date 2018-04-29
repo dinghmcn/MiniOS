@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="keyguard_message">请按OK键解锁</string>
+    <string name="fota_new_version">发现到新版本，是否要升级？</string>
+    <string name="fota_update_result">升级成功！</string>
+</resources>

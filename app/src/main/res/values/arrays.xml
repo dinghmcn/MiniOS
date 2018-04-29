@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <integer-array name="main_menu_image_array">
+        <item>@drawable/main_menu_contacts</item>
+        <item>@drawable/main_menu_mms</item>
+        <item>@drawable/main_menu_call_log</item>
+        <item>@drawable/main_menu_music</item>
+        <item>@drawable/main_menu_sound_recorder</item>
+        <item>@drawable/main_menu_bluetooth</item>
+        <item>@drawable/main_menu_alarm_clock</item>
+        <item>@drawable/main_menu_settings</item>
+    </integer-array>
+</resources>

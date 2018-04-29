@@ -2,19 +2,60 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.dinghmcn.minios">
 
+    <permission android:name="com.android.permission.RECV_FOTA_NEW_VERSION" />
+    <permission android:name="com.android.permission.custom_update"/>
+
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.DEVICE_POWER" />
+    <uses-permission android:name="com.android.permission.RECV_FOTA_NEW_VERSION" />
+    <uses-permission android:name="com.android.permission.custom_update"/>
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme">
-        <activity android:name=".LauncherActivity">
+        android:taskAffinity="com.dinghmcn.minios"
+        android:theme="@android:style/Theme.Holo.NoActionBar.Fullscreen">
+        <activity android:name=".LauncherActivity"
+            android:launchMode="singleTask"
+            android:clearTaskOnLaunch="true"
+            android:stateNotNeeded="true"
+            android:theme="@android:style/Theme.Holo.NoActionBar"
+            android:windowSoftInputMode="adjustPan"
+            android:screenOrientation="nosensor">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.HOME"/>
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <activity android:name=".MainMenuListActivity"/>
+
+        <activity android:name=".KeyguardFloatActivity"
+            android:launchMode="singleInstance"
+            android:excludeFromRecents="true"
+            android:theme="@style/Theme.KeyguardActivity"/>
+
+        <activity android:name=".KeyguardActivity"
+            android:launchMode="singleInstance"
+            android:excludeFromRecents="true"/>
+
+        <activity android:name=".fota.FotaNewVersionActivity"
+            android:launchMode="singleInstance"
+            android:excludeFromRecents="true"/>
+
+        <receiver android:name=".fota.FotaNewVersionReceiver">
+            <intent-filter>
+                <action android:name="com.fota.custom_new_version"/>
+                <action android:name="com.fota.custom_update_result"/>
+            </intent-filter>
+        </receiver>
+
     </application>
 
 </manifest>

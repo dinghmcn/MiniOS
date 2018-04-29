@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/keyguard"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/background_dark"
+    android:focusable="false">
+    <TextView android:id="@+id/keyguard_message"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:textSize="12sp"
+        android:singleLine="true"
+        android:ellipsize="marquee"
+        android:text="@string/keyguard_message"
+        android:focusable="true"/>
+
+    <ImageView
+        android:id="@+id/keyguard_ok"
+        android:layout_width="wrap_content"
+        android:layout_height="0dip"
+        android:layout_weight="2"
+        android:layout_gravity="center"
+        android:src="@drawable/keyguard_ok"
+        android:focusable="false"/>
+
+</LinearLayout>
